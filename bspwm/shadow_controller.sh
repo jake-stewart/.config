@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# hooks onto events when windows are added/removed/made floating
+# goal is to only make floating and monocled windows have shadows
+
 bspc subscribe node_add | while read -r _ _ desktop _ node; do
     state=$(bspc query -T -n "$node" | jq -r .client.state) 
     if [[ "$state" == "tiled" ]]; then
