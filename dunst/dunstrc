@@ -52,7 +52,7 @@
     verbosity = mesg
     ignore_dbusclose = false
 
-    # Legacy
+    # legacy
     force_xinerama = false
 
     # mouse
