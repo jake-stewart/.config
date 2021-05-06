@@ -1,0 +1,74 @@
+super + Return
+	st -e zsh
+
+super + w
+	firefox
+
+super + shift + w
+	firefox --private-window
+
+super + shift + p
+	firefox --private-window
+
+super + q
+	bspc node -c
+
+super + h
+        focus_left.sh
+
+super + l
+        focus_right.sh
+
+super + {j,k}
+	bspc node -f {south,north}
+
+super + shift + {h,j,k,l}
+        $HOME/.config/sxhkd/smart_move.sh {west,south,north,east}
+
+super + shift + c
+	bspc wm -r
+
+super + space
+    if [ -z "$(bspc query -N -n focused.floating)" ]; then \                    
+        bspc node focused -t floating; \                                        
+    else \                                                                      
+        bspc node focused -t tiled; \
+    fi
+
+super + f
+    bspc node focused -t \~fullscreen
+
+super + r
+    bspc node -f @parent && bspc node -R 90 && bspc node -f last
+
+super + {_, shift + } {grave,1-5}
+    bspc {desktop -f, node -d} {0-5}
+
+super + semicolon
+    $HOME/.config/bspwm/toggle_monocle.sh
+
+# expand a window by moving one of its side outward
+super + {y,u,i,o}
+	bspc node -z {left -50 0,bottom 0 50,top 0 -50,right 50 0}
+
+# contract a window by moving one of its side inward
+super + shift + {y,u,i,o}
+	bspc node -z {right -50 0,top 0 50,bottom 0 -50,left 50 0}
+
+super + p
+        dmenu_run_history
+
+super + s
+        screenshot -a
+
+super + shift + s
+        screenshot
+
+super + d
+        discord-canary
+
+super + BackSpace
+        lock
+
+super + slash
+        $HOME/.config/bspwm/flash_window.sh

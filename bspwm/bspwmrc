@@ -1,0 +1,27 @@
+#!/bin/sh
+
+hsetroot -solid "#20242a" &
+feh --bg-center ~/.config/bspwm/wallpaper.png
+
+bspc config normal_border_color "#373e4d"
+bspc config active_border_color "#373e4d"
+bspc config focused_border_color "#4f5769"
+
+bspc config -m DP-4 top_padding 33
+bspc config window_gap 12
+
+bspc monitor DP-2 -d '0'
+bspc monitor DP-4 -d '1' '2' '3' '4' '5'
+bspc config border_width 2
+
+~/.config/bspwm/start_monocle.sh
+~/.config/bspwm/shadow_controller.sh &
+
+sbspc rule -a matplotlib state=floating
+bspc rule -a feh state=floating
+bspc rule -a Zathura state=tiled
+
+start sxhkd
+start picom
+start polybar top
+start dunst

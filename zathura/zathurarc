@@ -1,0 +1,37 @@
+set font "Office Code Pro 11"
+set default-bg "#282C34" #00
+set default-fg "#ABB2BF" #01
+
+set statusbar-fg "#ABB2BF" #04
+set statusbar-bg "#282C34" #01
+
+set inputbar-bg "#282C34" #00 currently not used
+set inputbar-fg "#ABB2BF" #02
+
+set notification-error-bg "#282C34" #08
+set notification-error-fg "#ABB2BF" #00
+
+set notification-warning-bg "#282C34" #08
+set notification-warning-fg "#ABB2BF" #00
+
+set highlight-color "#2A2F39" #0A
+set highlight-active-color "#6A9FB5" #0D
+
+set completion-highlight-fg "#5C6370" #02
+set completion-highlight-bg "#90A959" #0C
+
+set completion-bg "#282C34" #02
+set completion-fg "#5C6370" #0C
+
+set notification-bg "#282C34" #0B
+set notification-fg "#ABB2BF" #00
+
+
+map o zoom out
+map i zoom in
+map d scroll half-down
+map u scroll half-up
+map g goto top
+map f scroll full-down
+map b scroll full-up
+map z zoom best-fit
