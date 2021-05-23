@@ -1,3 +1,5 @@
+set selection-clipboard "clipboard"
+
 set font "Office Code Pro 11"
 set default-bg "#282C34" #00
 set default-fg "#ABB2BF" #01
